@@ -1,20 +1,88 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title meta charset="utf-8"></title>
+        <title >Great Cliff's of California</title>
+        <meta charset="utf-8">
+        <!-- Embed Style css -->
+        <style>
+            /* header */
+            header{
+                width: 100%;
+                min-height: 400px;
+                padding-top: 3em;
+            }
+            #home header{
+                background: no-repeat lightgrey url(images/cliff_ocean.jpg);
+                background-image: 1500px;
+            }
+            .main-header{
+                background-color: rgb(255, 255, 255, 0.8);
+                width: 700px;
+                margin: 2em auto 0 auto;
+                min-height: 100px;
+                height: 100px;
+            }
+            .main-header .logo img{
+                width: 100px;
+                height: 100px;
+                margin: 0 2rem 0 0;
+                float: left;
+            }
+             /* navigation */
+            .main-menu{
+                margin-left: 227px;
+                font-weight: 400;
+            }
+            .main-menu ul li {
+                list-style-type: none;
+                display: inline-block;
+                float: left;
+                padding-left: 25px;
+                padding-right: 25px;
+                border-left: 1px solid rgba(202, 204, 202, 0.6);
+                line-height: 100px;
+                text-transform: uppercase;
+                font-size: 14px;
+            }
+            .main-menu ul li a{
+                text-decoration: none;
+                color: #888;
+            }
+            .main-menu ul li a:hover{
+                color: #92d034;
+            }
+            .main-menu ul li.active{
+                background: #92d034;
+                border: none;
+            }
+            .main-menu ul li.active a{
+                color:#fff
+            }
+            /* main */
+            main{
+                font-family: Arial, Helvetica, sans-serif;
+                margin: 50px;
+            }
+            main h2{
+                color: #92d034;
+            }
+            section{
+                width: 100%;
+                background-color: #4288c3;
+            }
+        </style>
     </head>
-    <body>
+    <body id="home">
         <!-- Container to wrap everything -->
         <div id="container">
             <header>
-                <img src="images/cliff_ocean.jpg" alt="Ocean View Cliff" width="1280" height="564"> 
                     <div class ="main-header">
                         <div class="logo">
                             <img src="images/logo.png" alt="Great Cliff's Logo" width="125">
                         </div>
                     <nav class="main-menu">
                         <ul>
-                            <li><a href="index.html">Home</a></li>
+                            <li class="active"><a href="index.html">Home</a></li>
                             <li>Cliffs</li>
                             <li><a href="activities.html">Activities</a></li>
                             <li><a href="contact.html">Contact</a></li>
@@ -32,12 +100,12 @@
     </main> <!-- End  Main Content -->
     <section>
         <ul id="partners">
-            <li class="partners"><h3>Partner 1 Image</h3></li>
-            <li class="partners"><h3>Partner 2 Image</h3></li>
-            <li class="partners"><h3>Partner 3 Image</h3></li>
-            <li class="partners"><h3>Partner 4 Image</h3></li>
-            <li class="partners"><h3>Partner 5 Image</h3></li>
-            <li class="partners"><h3>Partner 6 Image</h3></li>
+            <li class="partners"><img src="images/partners/partner-bustour.png" alt="Partner Bus Tours"></li>
+            <li class="partners"><img src="images/partners/partner-cabinrental.png" alt="Partner Cabin Rental"></li>
+            <li class="partners"><img src="images/partners/partner-campingadv.png" alt="Partner Camping Adventure"></li>
+            <li class="partners"><img src="images/partners/partner-collegetours.png" alt="Partner College Tours"></li>
+            <li class="partners"><img src="images/partners/partner-rentalbike.png" alt="Partner Bike Rentals"></li>
+            <li class="partners"><img src="images/partners/partner-tourgroup.png" alt="Partner Tour Group"></li>
         </ul>
     </section>
     <footer>
