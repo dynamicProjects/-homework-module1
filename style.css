@@ -57,7 +57,7 @@
         font-family: Arial, Helvetica, sans-serif;
         margin: 50px;
     }
-    main h2{
+    main h1{
         color: #92d034;
     }
     section{
@@ -173,4 +173,57 @@
     #contact header{
         background: no-repeat lightgrey url(images/cliff_rock.jpg);
         background-image: 1500px;
+    }
+    .contactinfo{
+        margin: 10px;
+    }
+    .phone{
+        margin-bottom: 10px;
+    }
+    .phoneSpan{
+        font-weight: bold;
+    }
+    .emailSpan{
+        font-weight: bold;
+    }
+    legend{
+        color: #4977D1;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+    label{
+        display: block;
+        margin: 15px 0 0 0;
+        font-weight: bold;
+    }
+    input{
+        width: 400px;
+    }
+    input[type="radio"]{
+        width: 25px;
+        display: inline;
+    }
+    .radioLabel{
+        display: inline-block;
+    }
+    select{
+        width: 150px;
+        text-align: center;
+    }
+    .selectLabel{
+        display: inline-block
+    }
+    textarea{
+        width: 400px;
+        height: 100px;
+    }
+    input[type="submit"]{
+        display: block;
+        margin: 20px 0 10px 0;
+        width: 100px;
+        padding: 10px 25px 10px 25px;
+        background: #4977D1;
+        border: none;
+        color: #fff;
+        margin-left: 300px;
     }
