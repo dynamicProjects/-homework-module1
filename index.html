@@ -86,8 +86,10 @@
                 ampm = "AM";
             }
             var time = hr + ":" + min + ":" + sec + " " + ampm;
-
+            document.getElementById("clock").innerText = time;
+            setInterval(currentTime, 1000); 
         }
+        currentTime();
     </script>
     </body>
 </html>
