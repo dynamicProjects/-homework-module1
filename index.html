@@ -24,6 +24,10 @@
                     </nav>
                      </div>
             </header> 
+            <section id="timeofday">
+                <span>Your Current Local Time:</span>
+                <span id="clock"></span>
+            </section>
        <!--  Main Content -->
        <main>
         <h1>Introducing California's Greatest Cliffs</h1>
@@ -56,5 +60,34 @@
     </div>
     </footer>
     </div>
+    <!-- javascript codes -->
+    <script>
+        // create a time data function
+        function currentTime(){
+            // declare variables 
+            var d= new Date();
+            var hr = d.getHours();
+            var min = d.getMinutes();
+            var sec = d.getSeconds();
+            var ampm;
+            if(sec < 10){
+                sec = "0" + sec;
+            }
+            if(min > 10){
+                min = "0" + min;
+            }
+            // Determin AM or PM string
+            if (hr == 12){
+                ampm = "PM"
+            }else if(hr > 12){
+                hr -= 12;
+                ampm = "PM";
+            }else{
+                ampm = "AM";
+            }
+            var time = hr + ":" + min + ":" + sec + " " + ampm;
+
+        }
+    </script>
     </body>
 </html>
