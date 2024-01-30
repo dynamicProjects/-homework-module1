@@ -279,3 +279,18 @@
     #clock{
         color: #125688;
     }
+    /* random code css */
+    .randomCode{
+      margin-left: 99px;
+    }
+    .randomCode input{
+        width: 165px;
+        padding: 5px;
+    }
+    #codes{
+        display: inline-block;
+        width: 100px;
+        padding: 10px;
+        text-align: center;
+        background-color: #A9A9A9;
+    }
