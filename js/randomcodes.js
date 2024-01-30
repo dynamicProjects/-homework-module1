@@ -9,3 +9,8 @@ function generateCode(){
     return code;
 }
 document.getElementById("codes").innerHTML=generateCode();
+// disable button
+function disableButton(){
+    document.getElementById("submit").disabled = true;
+}
+disableButton();

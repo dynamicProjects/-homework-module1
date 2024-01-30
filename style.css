@@ -222,7 +222,7 @@
         margin: 20px 0 10px 0;
         width: 100px;
         padding: 10px 25px 10px 25px;
-        background: #4977D1;
+        /* background: #4977D1; */
         border: none;
         color: #fff;
         margin-left: 300px;
@@ -289,8 +289,7 @@
     }
     #codes{
         display: inline-block;
-        width: 100px;
-        padding: 10px;
+        padding: 13px;
         text-align: center;
         background-color: #A9A9A9;
     }
