@@ -168,6 +168,7 @@
     td:first-child{
         font-weight: bold;
         background: #bde1ff;
+        color: black;
     }
     .highlight { 
         color:white; 
