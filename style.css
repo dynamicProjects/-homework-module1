@@ -169,7 +169,11 @@
         font-weight: bold;
         background: #bde1ff;
     }
-    .highlight { color:red; background: yellow;}
+    .highlight { 
+        color:white; 
+        background: #92d034;
+        cursor: pointer;
+    }
     /* contact css */
     #contact header{
         background: no-repeat lightgrey url(images/cliff_rock.jpg);

@@ -29,6 +29,11 @@
     // jquery code for table
     $(document).ready(function(){
         $(document).bind("click",function(e){
-          $(e.target).closest("td").toggleClass("highlight")
+            var closestTd = $(e.target).closest("td");
+
+    // Check if the closest "td" element exists and its content is not "Not available"
+    if (closestTd && closestTd.text().trim().toLowerCase() !== "not available") {
+        closestTd.toggleClass("highlight");
+    }
         })
     });
