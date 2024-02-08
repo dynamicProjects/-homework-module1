@@ -26,3 +26,22 @@
         // Append the list item to the ul
         ul.appendChild(li);
     });
+
+    $(document).ready(function(){
+        // Show lightbox on click
+        $(".wrapper img").click(function(){
+            $('.backdrop').animate({'opacity':'.50'}, 300, 'linear').css('display', 'block');
+          var imgSrc = $(this).attr('src');
+          $(".lightbox-image").attr('src', imgSrc);
+          $(".lightbox").fadeIn();
+        });
+        
+        // Close lightbox on close button click or clicking outside the image
+        $(".lightbox, .close").click(function(){
+            $('.backdrop').animate({'opacity':'0'}, 300, 'linear', function(){
+                $('.backdrop').css('display', 'none');
+            });
+          $(".lightbox").fadeOut();
+        });
+      });
+    
