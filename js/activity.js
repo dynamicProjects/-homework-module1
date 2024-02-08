@@ -30,10 +30,22 @@
     $(document).ready(function(){
         $(document).bind("click",function(e){
             var closestTd = $(e.target).closest("td");
+            var content = closestTd.text();
 
     // Check if the closest "td" element exists and its content is not "Not available"
     if (closestTd && closestTd.text().trim().toLowerCase() !== "not available") {
         closestTd.toggleClass("highlight");
+        if( closestTd.hasClass("highlight")){
+            $("#displaySelected").css("visibility","visible");
+            $("#displaySelected").css("margin-top","2em");
+            $("#result").append("<p>"+content+"</p>");
+        }else{
+            $('#result p:contains('+content+')').remove;
+            if( $("#result").has('p').length==false){
+                $("#displaySelected").css("visibility","hidden");
+                $("#displaySelected").css("margin-top","0");
+            }
+        }
     }
         })
     });
