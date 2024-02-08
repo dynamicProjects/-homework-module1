@@ -31,16 +31,19 @@
         $(document).bind("click",function(e){
             var closestTd = $(e.target).closest("td");
             var content = closestTd.text();
+            var closestTh = $(e.target).closest("th");
 
     // Check if the closest "td" element exists and its content is not "Not available"
-    if (closestTd && closestTd.text().trim().toLowerCase() !== "not available") {
+    if (closestTd && closestTd.text().trim().toLowerCase() !== "not available" &&
+    closestTh.length === 0) {
+        var heading = closestTd.closest("table").find("th").eq(closestTd.index()).text().trim();
         closestTd.toggleClass("highlight");
         if( closestTd.hasClass("highlight")){
             $("#displaySelected").css("visibility","visible");
             $("#displaySelected").css("margin-top","2em");
-            $("#result").append("<p>"+content+"</p>");
+            $("#result").append("<p>" + content + " at " + heading + "</p>");
         }else{
-            $('#result p:contains('+content+')').remove;
+            $('#result p:contains(' + content + " at " + heading +')').remove();
             if( $("#result").has('p').length==false){
                 $("#displaySelected").css("visibility","hidden");
                 $("#displaySelected").css("margin-top","0");
