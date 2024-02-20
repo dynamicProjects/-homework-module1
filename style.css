@@ -296,6 +296,7 @@
         text-align: center;
         width: 500px;
         margin: 0;
+        line-height: 0;
     }
     .lightbox-toggle {
         color: black;
