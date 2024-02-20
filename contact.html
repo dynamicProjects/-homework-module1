@@ -6,6 +6,8 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
          <!-- Bootstrap CSS -->
          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+         <!-- Font Awesome CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
         <link rel="stylesheet" href="style.css">
     </head>
     <body id="contact" onLoad="disableButton(true)">
@@ -99,7 +101,10 @@
                         <p id="codes"></p>
                     </div>
                     <div class="button">
-                        <input id = "submit" type="submit" value="Inquire">
+                        <!-- <input id = "submit" type="submit" value="Inquire"> -->
+                        <button id = "submit" type="submit" class="btn btn-primary" disabled> 
+                            <i class="fas fa-paper-plane"></i> Inquire
+                        </button>
                     </div> 
                 </fieldset>  
                 </form>
