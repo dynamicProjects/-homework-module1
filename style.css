@@ -2,15 +2,15 @@
     /* header */
     header{
         width: 100%;
-        min-height: 400px;
-        padding-top: 3em;
+        min-height: 275px;
+        /* padding-top: 3em; */
     }
-    #home header{
+    #home{
         background: no-repeat lightgrey url(images/cliff_ocean.jpg);
-        background-image: 1500px;
+        background-size: 100% 400px;
     }
     .main-header{
-        background-color: rgb(255, 255, 255, 0.8);
+        background-color: rgba(38, 41, 61, 0.7);
         width: 700px;
         margin: 2em auto 0 auto;
         min-height: 100px;
@@ -23,10 +23,10 @@
         float: left;
     }
      /* navigation */
-    .main-menu{
+    /* .main-menu{
         margin-left: 227px;
         font-weight: 400;
-    }
+    } */
     .main-menu ul li {
         list-style-type: none;
         display: inline-block;
@@ -40,7 +40,7 @@
     }
     .main-menu ul li a{
         text-decoration: none;
-        color: #888;
+        color:  rgb(255, 255, 255);
     }
     .main-menu ul li a:hover{
         color: #92d034;
@@ -130,9 +130,9 @@
        color: white;
     }
     /* activities css */
-    #activities header{
+    #activities{
         background: no-repeat lightgrey url(images/runfly.jpg);
-        background-image: 1500px;
+        background-size: 100% 400px;
     }
     table{
         width: 1000px;
@@ -199,9 +199,9 @@
         width: 200px;
     }
     /* contact css */
-    #contact header{
+    #contact{
         background: no-repeat lightgrey url(images/cliff_rock.jpg);
-        background-image: 1500px;
+        background-size: 100% 400px;
     }
     .contactinfo{
         margin: 10px;
@@ -257,9 +257,9 @@
         margin-left: 300px;
     }
     /* cliffs css */
-    #cliffs header{
+    #cliffs{
         background: no-repeat lightgrey url(images/forest_cliff.jpg);
-        background-image: 1500px;
+        background-size: 100% 400px;
     }
     .wrapper {
         padding: 0 45px;
@@ -366,3 +366,4 @@
         text-align: center;
         background-color: #A9A9A9;
     }
+    
