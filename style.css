@@ -108,16 +108,16 @@
         font-size: 0.8em;
         text-align: center;
     }
-    footer #nondisclaimer .social .fa{
-      padding: 15px;
+    footer #nondisclaimer .social .fab{
+      padding: 12px;
       font-size: 15px;
-      width: 15px;
+      width: 37px;
       text-align: center;
       text-decoration: none;
       margin: 0 4px;
       border-radius: 50%;
     }
-    footer #nondisclaimer .social .fa:hover{
+    footer #nondisclaimer .social .fab:hover{
         opacity: 0.7;
     }
     footer #nondisclaimer .social .fa-facebook{
@@ -143,11 +143,14 @@
     }
     caption{
         background: #852b1b;
-        height: 40px;
-        color:#fff;
+        height: 55px;
+        color: #fff;
         font-size: 1.3em;
         font-weight: bold;
         padding-top: 1em;
+        padding-left: 10px;
+        line-height: 1;
+        caption-side: top;
     }
     thead{
         background: #bde1ff;
@@ -202,6 +205,9 @@
         width: 200px;
     }
     /* contact css */
+    .textbox{
+        width: 400px;
+    }
     #contact{
         background: no-repeat lightgrey url(images/cliff_rock.jpg);
         background-size: 100% 400px;
@@ -373,20 +379,30 @@
     
     /* media queries */
 
-    @media (min-width: 576px) {
-        #partners .partner {
-            width: calc(50% - 20px); 
-        }
+/* Media Query for extra small screens */
+@media screen and (max-width: 575.98px) {
+    .partner {
+        flex-basis: 100%;
     }
-    
-    @media (min-width: 768px) {
-        #partners .partner {
-            width: calc(33.33% - 20px);
-        }
+}
+
+/* Media Query for small screens */
+@media screen and (min-width: 576px) and (max-width: 767.98px) {
+    .partner {
+        flex-basis: 50%;
     }
-    
-    @media (min-width: 992px) {
-        #partners .partner {
-            width: calc(16.66% - 20px);
-        }
+}
+
+/* Media Query for medium screens */
+@media screen and (min-width: 768px) and (max-width: 991.98px) {
+    .partner {
+        flex-basis: 33.333%;
     }
+}
+
+/* Media Query for large screens and beyond */
+@media screen and (min-width: 992px) {
+    .partner {
+        flex-basis: 16.666%;
+    }
+}

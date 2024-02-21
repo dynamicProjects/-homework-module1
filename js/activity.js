@@ -42,6 +42,9 @@
             $("#displaySelected").css("visibility","visible");
             $("#displaySelected").css("margin-top","2em");
             $("#result").append("<p>" + content + " at " + heading + "</p>");
+             // Show Bootstrap modal with the site name
+        $('#myModal').modal('show');
+        $('#myModal .modal-body').append("<p>" + content + " at " + heading + "</p>");
         }else{
             $('#result p:contains(' + content + " at " + heading +')').remove();
             if( $("#result").has('p').length==false){
