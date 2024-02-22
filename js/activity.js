@@ -39,18 +39,17 @@
         var heading = closestTd.closest("table").find("th").eq(closestTd.index()).text().trim();
         closestTd.toggleClass("highlight");
         if( closestTd.hasClass("highlight")){
-            $("#displaySelected").css("visibility","visible");
-            $("#displaySelected").css("margin-top","2em");
-            $("#result").append("<p>" + content + " at " + heading + "</p>");
              // Show Bootstrap modal with the site name
-        $('#myModal').modal('show');
-        $('#myModal .modal-body').append("<p>" + content + " at " + heading + "</p>");
+             $('#myModal .modal-body').empty();
+            $('#myModal').modal('show');
+            $("td.highlight").each(function() {
+            var selectedTd = $(this);
+            var selectedContent = selectedTd.text().trim();
+            var selectedHeading = selectedTd.closest("table").find("th").eq(selectedTd.index()).text().trim();
+            $('#myModal .modal-body').append("<p>" + selectedContent + " at " + selectedHeading + "</p>");
+            });
         }else{
-            $('#result p:contains(' + content + " at " + heading +')').remove();
-            if( $("#result").has('p').length==false){
-                $("#displaySelected").css("visibility","hidden");
-                $("#displaySelected").css("margin-top","0");
-            }
+            $('#myModal .modal-body .selected-item:contains(' + content + " at " + heading + ')').remove();
         }
     }
         })

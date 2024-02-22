@@ -11,7 +11,7 @@
     }
     .main-header{
         /* background-color: rgba(38, 41, 61, 0.7); */
-        width: 700px;
+        max-width: 700px;
         margin: 2em auto 0 auto;
         min-height: 100px;
         height: 100px;
@@ -68,14 +68,17 @@
         background-color: #4288c3;
     }
     section #partners{
-        width: 1200px;
-        padding:2em 0 2em 0;
-        margin:0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 2em 0;
+        margin: 0 auto;
         text-align: center;
+        max-width: 1200px;
     }
     section #partners .partner{
         display: inline-block;
-        margin: 0 0.75em;
+        margin: 0.75em auto; 
         padding: 1.3em 1.5em;
         background-color: #fff;
         border-radius: 50%;
@@ -148,9 +151,9 @@
         font-size: 1.3em;
         font-weight: bold;
         padding-top: 1em;
-        padding-left: 10px;
         line-height: 1;
         caption-side: top;
+        text-align: center;
     }
     thead{
         background: #bde1ff;
@@ -271,38 +274,31 @@
         background-size: 100% 400px;
     }
     .wrapper {
-        padding: 0 45px;
-        height: 620px;
-       margin-top: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
     }
-    .Westcliff{
-        width: 626px;
-        float: right;
+    .wrapper > div {
+        margin: 10px;
+        text-align: center;
+        flex: 1 0 calc(50% - 20px); /* Two items per row with some spacing */
     }
-    .northCliff{
-        width: 543px;
-        float: right;
-        padding-bottom: 15px;
-    }
-    .eastCliff{
-        width: 626px;
-        float: right;
-    }
-    .sothCliff{
-        width: 543px;
-        float: right;
-    }
+    
+    .Westcliff img,
+.northCliff img,
+.eastCliff img,
+.sothCliff img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
     .headingStyle{
         background: #852b1b;
-        height: 40px;
         color: #fff;
         font-size: 1.3em;
         font-weight: bold;
-        padding-top: 1em;
-        text-align: center;
-        width: 500px;
-        margin: 0;
-        line-height: 0;
+        padding: 10px;
+         margin:0;
     }
     .lightbox-toggle {
         color: black;
@@ -380,29 +376,29 @@
     /* media queries */
 
 /* Media Query for extra small screens */
-@media screen and (max-width: 575.98px) {
-    .partner {
-        flex-basis: 100%;
+
+
+
+
+#partners .partner img {
+    border-radius: 50%; 
+    max-width: 100%; 
+    margin: 10px; 
+}
+@media (min-width: 576px) {
+    #partners .partner {
+        width: calc(50% - 20px); 
     }
 }
 
-/* Media Query for small screens */
-@media screen and (min-width: 576px) and (max-width: 767.98px) {
-    .partner {
-        flex-basis: 50%;
+@media (min-width: 768px) {
+    #partners .partner {
+        width: calc(33.33% - 20px);
     }
 }
 
-/* Media Query for medium screens */
-@media screen and (min-width: 768px) and (max-width: 991.98px) {
-    .partner {
-        flex-basis: 33.333%;
-    }
-}
-
-/* Media Query for large screens and beyond */
-@media screen and (min-width: 992px) {
-    .partner {
-        flex-basis: 16.666%;
+@media (min-width: 992px) {
+    #partners .partner {
+        width: calc(16.66% - 20px);
     }
 }
