@@ -354,12 +354,14 @@
         color: #125688;
     }
     /* random code css */
-    .randomCode{
-      margin-left: 99px;
+    .randomCode {
+        margin-left: 5vw; 
     }
-    .randomCode input{
-        width: 165px;
-        padding: 5px;
+    
+    .randomCode input {
+        width: 30vw; 
+        max-width: 200px; 
+        padding: 0.5em;
     }
     #codes{
         display: inline-block;
